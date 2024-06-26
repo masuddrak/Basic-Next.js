@@ -23,13 +23,17 @@ const Navber = () => {
             title:"Services",
             path:"/services"
         },
+        {
+            title:"Blogs",
+            path:"/blogs"
+        },
       
     ]
     const loginHandler=()=>{
         router.push("/about")
     }
     return (
-        <nav className='flex justify-between px-2 py-1'>
+        <nav className='flex justify-between px-2 py-1 border border-1'>
             <h2 className='text-3xl'>Nex.js</h2>
             <ul className='flex gap-4'>
                {navlinks?.map(navlink=><Link key={navlink.path} href={navlink.path} className={`${navlink.path==activePath && "bg-green-400"}`}>{navlink.title}</Link>)}
